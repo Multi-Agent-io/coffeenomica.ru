@@ -4,14 +4,14 @@
 
       <!-- contacts block -->
       <div class="footer__contacts footer__block">
-        <h2 class="footer__title">Адрес</h2>
+        <h3 class="footer__title">Адрес</h3>
         <address class="footer__address">Санкт-Петербург, Третье место, <br> Литейный проспект 62</address>
         <a href="tel:+79952323781" class="footer__phone">8 (995) 232–37-81</a>
       </div>
 
       <!-- working hours block -->
       <div class="footer__working-hours footer__block">
-        <h2 class="footer__title">Режим Работы</h2>
+        <h3 class="footer__title">Режим Работы</h3>
         <List/>
       </div>
 
@@ -21,7 +21,7 @@
 
       <!-- different maps block ? -->
       <div class="footer__maps footer__block">
-        <h2 class="footer__title">Посмотреть на картах</h2>
+        <h3 class="footer__title">Посмотреть на картах</h3>
         <g-link class="link footer__link" to="https://go.2gis.com/51wu6">2GIS</g-link>
         <g-link class="link footer__link" to="https://goo.gl/maps/5GQzJtWWah4qF1V47">Google Maps</g-link>
         <g-link class="link footer__link" to="https://yandex.ru/maps/-/CCURa-BpSC">Yandex Карты</g-link>
@@ -29,7 +29,7 @@
 
       <!-- collaboration block -->
       <div class="footer__collaboration footer__block">
-        <h2 class="footer__title">По вопросам сотрудничества</h2>
+        <h3 class="footer__title">По вопросам сотрудничества</h3>
         <a class="link" href="mailto:coffeenomica@multi-agent.io">
           coffeenomica@multi-agent.io
         </a>
@@ -37,7 +37,7 @@
 
       <!-- Follow block -->
       <div class="footer__follow footer__block">
-        <h2 class="footer__title">Подписаться на нас</h2>
+        <h3 class="footer__title">Подписаться на нас</h3>
         <span class="footer__link">
           @coffeenomica
         </span>
@@ -61,15 +61,15 @@ export default {
 <style lang="scss">
   .footer {
     position: relative;
+    max-height: 800px;
     overflow: hidden;
     &__info {
       position: absolute;
       // top: 0;
+      // padding-top: calc(100% * 40 / 1920);
+      padding: 40px 0;
       left: 0;
-      // padding: calc(100% * 30 / 1920) 0;
-      padding: calc(100% * 20 / 1920) 0;
       width: 45%;
-      height: 51%;
       text-align: center;
       z-index: 5;
 
@@ -90,12 +90,15 @@ export default {
 
       &--first {
         top: 0;
+        height: 50%;
+        z-index: 10;
+        // padding-top: calc(100% * 50 / 1920);
       }
 
       &--second {
         bottom: 0;
-        height: 49%;
-
+        height: 50%;
+        // padding-bottom: calc(100% * 50 / 1920);
       }
     }
 
@@ -104,12 +107,12 @@ export default {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 24px;
       font-weight: 400;
 
       &:not(:last-child) {
-        margin-bottom: 25px;
+        margin-bottom: 40px;
       }
     }
 
@@ -118,6 +121,7 @@ export default {
       font-size: 18px;
       font-weight: 600;
       text-transform: uppercase;
+      letter-spacing: 0.5px
     }
 
     &__address {
@@ -143,7 +147,7 @@ export default {
 
     &__link {
       &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
       }
     }
   }
@@ -152,6 +156,7 @@ export default {
   @media screen and (max-width: 932px) {
     .footer {
       min-height: 1094px;
+      max-height: unset;
       height: 100%;
 
       &__info {

@@ -204,15 +204,16 @@ body {
         display: none;
       }
       &:nth-child(3) {
-        transform: translateY(-1px) rotate(45deg)
+        transform: translateY(-2px) rotate(45deg)
       }
     }
   }
 
   &.active {
     position: fixed;
+    top: 28px;
     span {
-      margin-bottom: -2px; 
+      margin-bottom: -3px; 
       &:nth-child(1) {
         transform: translateY(4px) rotate(-45deg)
       }
@@ -221,7 +222,7 @@ body {
         transform: translateX(-40px);
       }
       &:nth-child(3) {
-        transform: translateY(-1px) rotate(45deg)
+        transform: translateY(-2px) rotate(45deg)
       }
     }
   }

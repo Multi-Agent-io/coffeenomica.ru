@@ -3,7 +3,7 @@
     <div class="container header__container">
 
       <g-link class="logo header__logo" to="/">
-        <g-image src="@/assets/images/logo.svg" />
+        <g-image src="@/assets/images/logo.svg" alt="логотип Coffeenomica" />
       </g-link>
 
       <!-- burger button -->
@@ -13,6 +13,7 @@
         <span class="burger-line"></span>
         <span class="burger-line"></span>
       </button>
+
 
       <div class="mobile-menu" :class="{'active': isMenuOpen}">
 
@@ -89,8 +90,10 @@ export default {
     padding-top: 26px;
 
     &__container {
+      position: relative;
       display: flex;
       align-items: center;
+      z-index: 5;
     }
 
     &__logo {
@@ -230,18 +233,22 @@ export default {
       background-size: cover;
       background-repeat: no-repeat;
       transform: translateX(-110%);
-      transition: transform 0.4s ease-in-out, opacity 0.33s ease-in-out;
+      transition: transform 0.4s ease-in-out, opacity 0.33s ease-in-out, visibility 0.4s ease;
       opacity: 0;
       z-index: 20;
+      visibility: hidden;
 
       &.active {
         opacity: 1;
+        visibility: visible;
         transform: translateX(0%);
       }
     }
 
     .nav {
       margin-right: 0;
+
+      
       &__list {
         flex-direction: column;
       }
@@ -262,15 +269,51 @@ export default {
         font-size: 2rem;
       }
     }
+
   }
 
   @media screen and (max-width: 560px) {
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-bottom: 15px;
+      width: 100%;
+      // height: 100%;
+      z-index: 20;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:  url('../assets/images/background-blue.jpg');
+        // background:  url('../assets/images/header-mobile-bg.png');
+        background-position: center;
+        background-size: cover;
+        // filter: blur(3px);
+        z-index: 10;
+        // opacity: 0.4 ;
+      }
+
+      &__container {
+        z-index: 20;
+      }
+    }
+
+
     .nav__link {
       font-size: 1rem;
     }
 
     .mobile-menu {
       padding-top: 0;
+    }
+
+    .burger {
+      top: 16px;
     }
   }
 </style>
