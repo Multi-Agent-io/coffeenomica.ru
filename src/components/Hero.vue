@@ -1,9 +1,14 @@
 <template>
   <section class="hero">
-    <div class="container">
-      <h3 class="hero__sub-title">Первое робокафе в Петербурге</h3>
-      <h1 class="hero__title">COFFEENOMICA</h1>
-      <address class="hero__address">Третье место, Литейный проспект 62</address>
+    <div class="hero__img">
+      <g-image aria-hidden="true" src="~/assets/images/bg-photo.jpg" alt="Кафе Кофеномика" />
+    </div>
+    <div class="container hero__container">
+      <h1 class="hero__title">
+        <span class="hero__sub-title">Первое робокафе в Петербурге</span>
+        COFFEENOMICA
+        <span class="hero__address">Третье место, Литейный проспект 62</span>
+      </h1>
     </div>
   </section>
 </template>
@@ -17,6 +22,7 @@ export default {
 
 <style lang="scss" scoped>
   .hero {
+    position: relative;
     margin-top: -126px;
     min-height: calc(100vh + 26px);
     display: flex;
@@ -25,24 +31,41 @@ export default {
     justify-content: center;
     text-align: center;
     color: #fff;
-    background-image: url('../assets/images/bg-photo.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    z-index: 1;
+
+    &__container {
+      position: relative;
+      z-index: 5;
+    }
+
+    &__img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+
+      img {
+        height: 100%;
+      }
+    }
 
     &__title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       font-size: 5rem;
       font-family: 'Yeseva One', sans-serif;
       font-weight: normal;
-      text-transform: uppercase;
     }
 
     &__sub-title {
+      font-family: 'Roboto Mono', sans-serif;
       font-size: 1.55rem;
       font-weight: 400;
     }
 
     &__address {
+      font-family: 'Roboto Mono', sans-serif;
       font-size: 1rem;
       line-height: 29px;
       font-style: normal;
@@ -71,6 +94,14 @@ export default {
 
   @media screen and (max-width: 560px) {
     .hero {
+
+    &__container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
       &__title {
         font-size: 36px;
         line-height: 43px;

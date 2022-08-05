@@ -10,7 +10,7 @@
       title="Робот Eisenkoch готовит вкусные"
       titleWithDecoration="вафли"
       description="Вкусные вафли по фирменным рецептам от робота-повора Eisenkoch"
-      image="eisenkoch.png"
+      image="eisenkoch-l.png"
       imageAlt="робот eisenkoch"
       imageText="Посмотреть мультфильм про Айзенкоха"
       link="https://www.youtube.com/watch?v=UKAM6_tFuXk&ab_channel=Multi-AgentSystems"
@@ -29,7 +29,7 @@
       title="А робот gaka-chu нарисовал для кафе"
       titleWithDecoration="картины"
       description="Интерьер кофейни украшен кистью робота-художника Gaka-chu, ещё один повод прийти к нам"
-      image="gakachu.png"
+      image="gakachu-l.png"
       imageAlt="робот gakachu"
       :isReverse="true"
     >
@@ -53,12 +53,12 @@
     >
 
       <div class="btn-block">
-        <g-link class="coffeenomica-section__btn btn" :style="{'marginBottom': '32px'}" to="/menu" aria-label="Посмотреть меню с кофе">
+        <g-link class="coffeenomica-section__btn btn" :style="{'marginBottom': '32px'}" to="/menu" aria-label="Посмотреть меню с кофе" target="_blank">
           <span class="btn__text">
             Меню с <b>КОФЕ</b>
           </span>
         </g-link>
-        <g-link class="coffeenomica-section__btn btn" to="/menu" aria-label="Посмотреть меню с вафлями">
+        <g-link class="coffeenomica-section__btn btn" to="/menu" aria-label="Посмотреть меню с вафлями" target="_blank">
           <span class="btn__text">
             Меню с <b>ВАФЛЯМИ</b>
           </span>

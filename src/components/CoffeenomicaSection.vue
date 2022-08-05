@@ -310,6 +310,7 @@ export default {
             bottom: 16%;
             min-height: auto;
             width: 50%;
+            right: 0;
           }
         }
       }

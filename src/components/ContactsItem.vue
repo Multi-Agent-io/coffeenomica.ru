@@ -1,6 +1,6 @@
 <template>
   <li class="footer__item">
-    <h3 class="footer__day">{{day}}</h3>
+    <span class="footer__day">{{day}}</span>
     <span class="footer__time">{{time}}</span>
   </li>
 </template>

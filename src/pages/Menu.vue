@@ -2,18 +2,6 @@
       <transition name="fade" appear>
         <div class="menu" v-if="menu">
 
-          <div class="menu__container menu__container--smoothies">
-            <div v-for="item in smoothie" :key="item.id" class="menu__wrapper">
-              <MenuBlock :category=item.category :options=item.options :addsOn="item.additional" />
-            </div>
-          </div>
-
-          <div class="menu__container menu__container--lemonades">
-            <div v-for="item in lemonades" :key="item.id" class="menu__wrapper">
-              <MenuBlock :category=item.category :options=item.options :addsOn="item.additional" />
-            </div>
-          </div>
-
           <div class="menu__container menu__container--coffee">
             <div v-for="item in coffee" :key="item.id" class="menu__wrapper">
               <MenuBlock :category=item.category :options=item.options :addsOn="item.additional" />
@@ -22,6 +10,18 @@
 
           <div class="menu__container menu__container--waffles">
             <div v-for="item in waffles" :key="item.id" class="menu__wrapper">
+              <MenuBlock :category=item.category :options=item.options :addsOn="item.additional" />
+            </div>
+          </div>
+
+          <div class="menu__container menu__container--smoothies">
+            <div v-for="item in smoothie" :key="item.id" class="menu__wrapper">
+              <MenuBlock :category=item.category :options=item.options :addsOn="item.additional" />
+            </div>
+          </div>
+
+          <div class="menu__container menu__container--lemonades">
+            <div v-for="item in lemonades" :key="item.id" class="menu__wrapper">
               <MenuBlock :category=item.category :options=item.options :addsOn="item.additional" />
             </div>
           </div>
