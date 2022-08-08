@@ -40,6 +40,8 @@
     <Section 
       image="gakachu-l.png"
       imageAlt="робот gakachu"
+      imageText="Узнать больше про механического Ван Гога"
+      link="https://www.youtube.com/watch?v=GxlYxaykqTU"
       :isReverse="true"
     >
 
@@ -71,6 +73,8 @@
       id="menu"
       image="menu-img.png"
       imageAlt="меню кафе"
+      imageText="Ознакомиться с нашим меню"
+      link="/menu"
       :withPattern="true"
     >
 
@@ -88,12 +92,7 @@
       <div class="btn-block">
         <g-link class="coffeenomica-section__btn btn" :style="{'marginBottom': '32px'}" to="/menu" aria-label="Посмотреть меню с кофе" target="_blank">
           <span class="btn__text">
-            Меню с <b>КОФЕ</b>
-          </span>
-        </g-link>
-        <g-link class="coffeenomica-section__btn btn" to="/menu" aria-label="Посмотреть меню с вафлями" target="_blank">
-          <span class="btn__text">
-            Меню с <b>ВАФЛЯМИ</b>
+            Посмотреть <b>Меню</b>
           </span>
         </g-link>
       </div>

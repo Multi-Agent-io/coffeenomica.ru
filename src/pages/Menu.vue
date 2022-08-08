@@ -26,12 +26,6 @@
             </div>
           </div>
 
-          <div class="menu__container menu__container--special">
-            <div v-for="item in special" :key="item.id" class="menu__wrapper">
-              <MenuBlock :category=item.category :options=item.options :addsOn="item.additional" />
-            </div>
-          </div>
-
         </div>
       </transition>
 </template>
