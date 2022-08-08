@@ -15,7 +15,7 @@
       </button>
 
 
-      <div class="mobile-menu" :class="{'active': isMenuOpen}">
+      <div ref="menu" class="mobile-menu" :class="{'active': isMenuOpen}">
 
         <nav id="nav" class="nav">
           <ul class="nav__list">
@@ -71,11 +71,11 @@ export default {
     }
   },
 
+
   mounted() {
     if(this.$route.hash) {
-      setTimeout(() => this.scrollToSection(null, this.$route.hash.substring(1)), 300)
+      setTimeout(() => this.scrollToSection(null, this.$route.hash.substring(1)), 200)
     }
-
   }
 
 
@@ -218,25 +218,26 @@ export default {
       }
 
     .mobile-menu {
-      position: fixed;
-      padding-top: 80px;
-      width: 100%;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-image: url('../assets/images/background-blue.jpg');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      transform: translateX(-110%);
-      transition: transform 0.4s ease-in-out, opacity 0.33s ease-in-out, visibility 0.4s ease;
-      opacity: 0;
-      z-index: 20;
-      visibility: hidden;
+        display: block;
+        position: fixed;
+        padding-top: 80px;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../assets/images/background-blue.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateX(-110%);
+        transition: transform 0.4s ease-in-out, opacity 0.33s ease-in-out, visibility 0.4s ease;
+        opacity: 0;
+        z-index: 20;
+        visibility: hidden;
 
       &.active {
         opacity: 1;

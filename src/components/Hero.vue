@@ -25,6 +25,7 @@ export default {
     position: relative;
     margin-top: -126px;
     min-height: calc(100vh + 26px);
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,6 +47,7 @@ export default {
 
       img {
         height: 100%;
+        width: 100%;
       }
     }
 
