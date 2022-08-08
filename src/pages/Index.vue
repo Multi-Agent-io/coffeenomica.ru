@@ -124,7 +124,7 @@ export default {
       { property: "og:description", content: 'Первое робокафе в Петербурге. Угощайтесь вкусными вафлями с топпингами, ароматным кофе и авторскими напитками' },
       { property: "og:image", content: 'https://coffeenomica.ru/meta-image.jpg' },
       { property: "og:image:width", content: 1280 },
-      { property: "og:image:height", content: 765 },
+      { property: "og:image:height", content: 718 },
       { property: "og:url", content: 'https://coffeenomica.ru/' },
 
       { name: "twitter:card", content: "summary_large_image" },
