@@ -7,32 +7,54 @@
     <!-- Robots section (Eisenkoch) -->
     <Section 
       id="robots"
-      title="Робот Eisenkoch готовит вкусные"
-      titleWithDecoration="вафли"
-      description="Вкусные вафли по фирменным рецептам от робота-повора Eisenkoch"
       image="eisenkoch-l.png"
       imageAlt="робот eisenkoch"
       imageText="Посмотреть мультфильм про Айзенкоха"
       link="https://www.youtube.com/watch?v=UKAM6_tFuXk&ab_channel=Multi-AgentSystems"
     >
 
-      <g-link class="coffeenomica-section__btn btn" to="https://multi-agent.io/projects/ru/eisenkoch/" aria-label="Узнать про робота-пекаря Eisenkoch">
+    <template v-slot:title>
+      Робот Eisenkoch готовит вкусные
+      <br>
+      <span class="title-with-decoration">вафли</span> 
+    </template>
+
+    <template v-slot:description>
+      Вкусные вафли по&nbsp;фирменным рецептам от&nbsp;робота&#8209;повара Eisenkoch
+    </template>
+
+    <template v-slot:buttons>
+
+      <g-link class="coffeenomica-section__btn btn" to="https://multi-agent.io/projects/ru/eisenkoch/" aria-label="Узнать про робота пекаря Eisenkoch">
         <span class="btn__text">
           Узнать про <b>Eisenkoch</b>
         </span>
       </g-link>
 
+    </template>
+
+
     </Section>
 
     <!-- Robots section (gaka-chu) -->
     <Section 
-      title="А робот gaka-chu нарисовал для кафе"
-      titleWithDecoration="картины"
-      description="Интерьер кофейни украшен кистью робота-художника Gaka-chu, ещё один повод прийти к нам"
       image="gakachu-l.png"
       imageAlt="робот gakachu"
       :isReverse="true"
     >
+
+
+    <template v-slot:title>
+      А&nbsp;робот gaka-chu нарисовал для кафе
+      <br>
+      <span class="title-with-decoration">картины</span> 
+    </template>
+
+    <template v-slot:description>
+      Интерьер кофейни украшен кистью робота&#8209;художника Gaka&#8209;chu, ещё один повод прийти к&nbsp;нам
+    </template>
+
+    <template v-slot:buttons>
 
       <g-link class="coffeenomica-section__btn btn" to="https://multi-agent.io/projects/ru/gakachu/" aria-label="Узнать про робота-художника Gaka-chu" >
         <span class="btn__text">
@@ -40,17 +62,28 @@
         </span>
       </g-link>
 
+    </template>
+
     </Section>
 
     <!-- Menu section -->
     <Section 
       id="menu"
-      titleWithDecoration="Кофе и вафли"
-      :description="`Угощайтесь вкусными вафлями с топпингами, ароматным кофе и авторскими напитками в первом робокафе Петербурга` "
       image="menu-img.png"
       imageAlt="меню кафе"
       :withPattern="true"
     >
+
+    <template v-slot:title>
+      <br>
+      <span class="title-with-decoration">Кофе&nbsp;и&nbsp;вафли</span> 
+    </template>
+
+    <template v-slot:description>
+      Угощайтесь вкусными вафлями с&nbsp;топпингами, ароматным кофе и&nbsp;авторскими напитками в&nbsp;первом робокафе Петербурга
+    </template>
+
+    <template v-slot:buttons>
 
       <div class="btn-block">
         <g-link class="coffeenomica-section__btn btn" :style="{'marginBottom': '32px'}" to="/menu" aria-label="Посмотреть меню с кофе" target="_blank">
@@ -64,6 +97,8 @@
           </span>
         </g-link>
       </div>
+
+    </template>
 
     </Section>
 
@@ -79,9 +114,23 @@ export default {
   },
 
   metaInfo: {
-    title: 'Главная',
+    title: 'Coffeenomica',
     meta: [
-      { key: 'description', name: 'description', content: 'Кофеномика - главная страница' },
+      { key: 'description', name: 'description', content: 'Первое робокафе в Петербурге. Угощайтесь вкусными вафлями с топпингами, ароматным кофе и авторскими напитками' },
+
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: 'coffeenomica.ru' },
+      { property: "og:title", content: 'Coffeenomica' },
+      { property: "og:description", content: 'Первое робокафе в Петербурге. Угощайтесь вкусными вафлями с топпингами, ароматным кофе и авторскими напитками' },
+      { property: "og:image", content: 'https://coffeenomica.ru/meta-image.jpg' },
+      { property: "og:image:width", content: 1280 },
+      { property: "og:image:height", content: 765 },
+      { property: "og:url", content: 'https://coffeenomica.ru/' },
+
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: 'Coffeenomica' },
+      { name: "twitter:image", content: 'https://coffeenomica.ru/meta-image.jpg '},
+      { name: "twitter:description", content: 'Первое робокафе в Петербурге. Угощайтесь вкусными вафлями с топпингами, ароматным кофе и авторскими напитками' },
     ]
   }
 }

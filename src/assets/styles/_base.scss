@@ -28,7 +28,7 @@ body {
   margin: 0;
   margin-bottom: 44px;
   font-size: 3rem;
-  line-height: 72px;
+  line-height: 1.2;
   font-family: 'Yeseva One', sans-serif;
   font-weight: 400;
   color: $color-light;
@@ -144,7 +144,7 @@ body {
   width: 100%;
   max-width: 1658px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 60px;
 }
 
 .btn-block {
@@ -230,6 +230,10 @@ body {
 
 // styles for media quieres 
 @media screen and (max-width: 900px) {
+
+  .container {
+    padding: 0 20px;
+  }
 
   .btn__text {
     font-size: 1rem;

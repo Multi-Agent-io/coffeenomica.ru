@@ -3,16 +3,19 @@
     <div class="container coffeenomica-section__container" :class="{'coffeenomica-section__container--reverse': isReverse}">
       
       <div class="coffeenomica-section__info">
+
         <h2 class="title">
-          {{title}}
-          <span class="title-with-decoration">{{titleWithDecoration}}</span>
+          <slot name="title"></slot>
         </h2>
+
         <p class="descr">
-          {{description}}
+          <slot name="description"></slot>
         </p>
-        <slot/>
+                  
+        <slot name="buttons"></slot>
       </div>
 
+      
       <div class="coffeenomica-section__image">
         <g-image :src="require(`!!assets-loader!@images/${image}`)" :alt="imageAlt"/>
         <g-link :to="link" v-if="imageText" class="coffeenomica-section__image--link">
@@ -31,23 +34,6 @@ export default {
     id: {
       type: String,
       default: null
-    },
-
-    title: {
-      type: String,
-      default: '',
-    },
-
-    titleWithDecoration: {
-      type: String,
-      required: true,
-      default: '',
-    },
-
-    description: {
-      type: String,
-      required: true,
-      default: '',
     },
 
     image: {
@@ -114,6 +100,10 @@ export default {
 
        .coffeenomica-section__info {
         flex-basis: 40%;
+       }
+
+       .title-with-decoration {
+          white-space: nowrap;
        }
 
       }
