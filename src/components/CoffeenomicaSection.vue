@@ -9,7 +9,8 @@
         </h2>
 
         <p class="descr">
-          <slot name="description"></slot>
+          {{description}}
+          <!-- <slot name="description"></slot> -->
         </p>
                   
         <slot name="buttons"></slot>
@@ -19,7 +20,7 @@
       <div class="coffeenomica-section__image">
         <div class="coffeenomica-section__image-container">
           <g-image :src="require(`!!assets-loader!@images/${image}`)" :alt="imageAlt"/>
-          <g-link :to="link" v-if="imageText" class="coffeenomica-section__image--link" target="_blank">
+          <g-link :to="link" class="coffeenomica-section__image--link" target="_blank">
             <span class="coffeenomica-section__image--text">{{imageText}}</span>
           </g-link>
         </div>
@@ -34,6 +35,11 @@ export default {
 
   props: {
     id: {
+      type: String,
+      default: null
+    },
+
+    description: {
       type: String,
       default: null
     },
@@ -96,15 +102,29 @@ export default {
        }
        
        .coffeenomica-section__image {
+        position: relative;
         flex-basis: 54%;
-        img {
+        cursor: pointer;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
           border: 7px solid #fff;
           border-radius: 100%;
         }
+        // img {
+        //   border: 7px solid #fff;
+        //   border-radius: 100%;
+        // }
        }
 
        .coffeenomica-section__info {
         flex-basis: 40%;
+        margin-right: 20px;
        }
 
        .title-with-decoration {
@@ -143,8 +163,7 @@ export default {
 
             &--link {
               width: calc(100% - 23%);
-              left: 18%;
-
+              left: 15%;
             }
           }
 
@@ -221,6 +240,7 @@ export default {
 
         .coffeenomica-section__info {
           width: 74%;
+          margin-right: 0;
         }
       }
 
@@ -303,9 +323,9 @@ export default {
             z-index: 6;
             width: 50%;
 
-            &--link {
-              height: 100%;
-            }
+            // &--link {
+            //   height: 100%;
+            // }
           }
 
         }

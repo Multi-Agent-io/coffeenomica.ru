@@ -7,6 +7,7 @@
     <!-- Robots section (Eisenkoch) -->
     <Section 
       id="robots"
+      :description="`Вкусные вафли по${'\u00A0'}фирменным рецептам от${'\u00A0'}робота${'\u2011'}повара Eisenkoch`"
       image="eisenkoch-l.png"
       imageAlt="робот eisenkoch"
       imageText="Посмотреть мультфильм про Айзенкоха"
@@ -17,10 +18,6 @@
       Робот Eisenkoch готовит вкусные
       <br>
       <span class="title-with-decoration">вафли</span> 
-    </template>
-
-    <template v-slot:description>
-      Вкусные вафли по&nbsp;фирменным рецептам от&nbsp;робота&#8209;повара Eisenkoch
     </template>
 
     <template v-slot:buttons>
@@ -38,9 +35,10 @@
 
     <!-- Robots section (gaka-chu) -->
     <Section 
+      :description="`Интерьер кофейни украшен кистью робота${'\u2011'}художника Gaka${'\u2011'}chu, ещё один повод прийти к${'\u00A0'}нам`"
       image="gakachu-l.png"
       imageAlt="робот gakachu"
-      imageText="Узнать больше про механического Ван Гога"
+      :imageText="`Узнать больше про механического Ван${'\u00A0'}Гога`"
       link="https://www.youtube.com/watch?v=GxlYxaykqTU"
       :isReverse="true"
     >
@@ -50,10 +48,6 @@
       А&nbsp;робот gaka-chu нарисовал для кафе
       <br>
       <span class="title-with-decoration">картины</span> 
-    </template>
-
-    <template v-slot:description>
-      Интерьер кофейни украшен кистью робота&#8209;художника Gaka&#8209;chu, ещё один повод прийти к&nbsp;нам
     </template>
 
     <template v-slot:buttons>
@@ -71,6 +65,7 @@
     <!-- Menu section -->
     <Section 
       id="menu"
+      :description="`Угощайтесь вкусными вафлями с${'\u00A0'}топпингами, ароматным кофе и${'\u00A0'}авторскими напитками в${'\u00A0'}первом робокафе Петербурга`"
       image="menu-img.png"
       imageAlt="меню кафе"
       imageText="Ознакомиться с нашим меню"
@@ -81,10 +76,6 @@
     <template v-slot:title>
       <br>
       <span class="title-with-decoration">Кофе&nbsp;и&nbsp;вафли</span> 
-    </template>
-
-    <template v-slot:description>
-      Угощайтесь вкусными вафлями с&nbsp;топпингами, ароматным кофе и&nbsp;авторскими напитками в&nbsp;первом робокафе Петербурга
     </template>
 
     <template v-slot:buttons>
