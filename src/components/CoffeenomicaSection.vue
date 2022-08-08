@@ -71,6 +71,7 @@ export default {
     position: relative;
     padding-top: 83px;
     padding-bottom: 32px;
+    background-color: #a3b5cb;
     background-image: url('../assets/images/background-blue.jpg');
     background-position: center;
     background-size: cover;
