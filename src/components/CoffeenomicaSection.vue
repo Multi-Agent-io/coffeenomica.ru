@@ -17,10 +17,12 @@
 
       
       <div class="coffeenomica-section__image">
-        <g-image :src="require(`!!assets-loader!@images/${image}`)" :alt="imageAlt"/>
-        <g-link :to="link" v-if="imageText" class="coffeenomica-section__image--link">
-          <span class="coffeenomica-section__image--text">{{imageText}}</span>
-        </g-link>
+        <div class="coffeenomica-section__image-container">
+          <g-image :src="require(`!!assets-loader!@images/${image}`)" :alt="imageAlt"/>
+          <g-link :to="link" v-if="imageText" class="coffeenomica-section__image--link" target="_blank">
+            <span class="coffeenomica-section__image--text">{{imageText}}</span>
+          </g-link>
+        </div>
       </div>
 
     </div>
@@ -69,7 +71,7 @@ export default {
 <style lang="scss" scoped>
   .coffeenomica-section {
     position: relative;
-    padding-top: 83px;
+    padding-top: 183px;
     padding-bottom: 32px;
     background-color: #a3b5cb;
     background-image: url('../assets/images/background-blue.jpg');
@@ -78,6 +80,8 @@ export default {
     background-repeat: no-repeat;
 
       &--pattern {
+        padding-top: 83px;
+        padding-bottom: 130px;
        &::after {
           content: '';
           position: absolute;
@@ -120,6 +124,7 @@ export default {
       &--reverse {
         position: static;
         .coffeenomica-section {
+          padding-top: 83px;
           &__info  {
             order: 2;
             margin-right: 0;
@@ -135,6 +140,12 @@ export default {
             height: auto;
             left: -4px;
             flex-basis: 60%;
+
+            &--link {
+              width: calc(100% - 23%);
+              left: 18%;
+
+            }
           }
 
         }
@@ -153,6 +164,10 @@ export default {
       flex-basis: 56%;
       height: 100%;
       overflow: hidden;
+
+      &-container {
+        position: relative;
+      }
 
       img {
         display: block;
@@ -237,6 +252,12 @@ export default {
               bottom: 0;
               flex-basis: auto;
               transform: scaleX(-1);
+
+              &:hover {
+                .coffeenomica-section__image--link {
+                  transform: scaleX(-1);
+                }
+              }
             }
           }
         }
@@ -261,22 +282,21 @@ export default {
       padding-bottom: calc(92px + 20px);
 
       &--pattern {
-        padding-bottom: calc(250px + 20px);
+        padding-bottom: calc(177px + 20px);
         &::after {
           bottom: 0;
-          // background-image: url('../assets/images/bg-with-pattern.png');
         }
         .coffeenomica-section {
 
-          &__container {
-            // position: relative;
-            height: 100%;
-            justify-content: flex-end;
-          }
+          // &__container {
+          //   // position: relative;
+          //   height: 100%;
+          //   justify-content: flex-end;
+          // }
 
-          &__info {
-            width: 84%;
-          }
+          // &__info {
+          //   width: 84%;
+          // }
 
           &__image {
             position: relative;
@@ -378,10 +398,10 @@ export default {
       &--pattern {
         .coffeenomica-section {
 
-          &__info {
-            width: 100%;
-            margin-bottom: 20px;
-          }
+          // &__info {
+          //   width: 100%;
+          //   margin-bottom: 20px;
+          // }
 
           &__image {
             width: 100%;

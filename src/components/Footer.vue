@@ -92,6 +92,7 @@ export default {
         top: 0;
         height: 50%;
         z-index: 10;
+        padding-top: 50px;
         // padding-top: calc(100% * 50 / 1920);
       }
 
