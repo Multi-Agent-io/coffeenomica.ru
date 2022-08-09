@@ -162,7 +162,7 @@ export default {
             flex-basis: 60%;
 
             &--link {
-              width: calc(100% - 22%);
+              width: 84%;
               left: 14%;
             }
           }
